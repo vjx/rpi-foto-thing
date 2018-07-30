@@ -1,0 +1,1 @@
+# rpi-foto-thing
