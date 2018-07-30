@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
-# Pi-Mation v0.5
-# Stop motion animation for the Raspberry Pi and camera module
-# Russell Barnes - 12 Nov 2013 for Linux User magazine issue 134 
-# www.linuxuser.co.uk
+# 
+# 
+#  
+# Based on Pi-Mation v0.5
 
 import pygame, picamera, os, sys
 
@@ -12,7 +12,7 @@ pics_taken = 0
 current_alpha, next_alpha = 128, 255
 
 # set your desired fps (~5 for beginners, 10+ for advanced users)
-fps = 5
+fps = 3
 
 # Initialise Pygame, start screen and camera
 pygame.init()
@@ -27,6 +27,7 @@ pygame.mouse.set_visible = False
 play_clock = pygame.time.Clock()
 camera = picamera.PiCamera()
 camera.resolution = (width, height)
+camera.rotation = 180
 
 def take_pic():
     """Grabs an image and load it for the alpha preview and 
